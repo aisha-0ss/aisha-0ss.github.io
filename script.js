@@ -1,4 +1,5 @@
 // Smooth scroll functionality for navigation links
+<script src="script.js"></script>
 const links = document.querySelectorAll('nav ul li a');
 
 links.forEach(link => {
@@ -28,3 +29,4 @@ function filterProjects(category) {
         }
     });
 }
+
