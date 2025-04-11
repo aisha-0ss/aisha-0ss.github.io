@@ -64,6 +64,122 @@ section {
   color: #777;
 }
 
+
+
+
+
+/* Home Section */
+#home {
+  background-color: #fce4ec;
+  height: 100vh;
+  position: relative; /* Allow absolute positioning of stickers */
+  overflow: hidden; /* Hide any part of the images that go outside the section */
+}
+
+#home .content {
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Keep the text content on top */
+}
+
+/* Sticker Styling */
+.sticker {
+  position: absolute; /* Position them freely within the section */
+  z-index: 1; /* Ensure stickers are behind the text */
+}
+
+.sticker img {
+  width: 80px; /* Size of each sticker */
+  height: auto;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+/* Random positioning for stickers at the bottom */
+.sticker1 {
+  top: 85%;
+  left: 15%;
+  transform: rotate(10deg);
+}
+
+.sticker2 {
+  top: 90%;
+  left: 30%;
+  transform: rotate(-10deg);
+}
+
+.sticker3 {
+  top: 95%;
+  left: 75%;
+  transform: rotate(15deg);
+}
+
+.sticker4 {
+    top: 77%;
+    left: 30%;
+    transform: rotate(-10deg);
+}
+
+
+.sticker5 {
+  top: 60%;
+  left: 60%;
+  transform: rotate(20deg);
+}
+
+.sticker6 {
+  top: 70%;
+  left: 80%;
+  transform: rotate(5deg);
+}
+
+.sticker7 {
+  top: 75%;
+  left: 50%; /* Move it further right */
+  transform: rotate(-15deg);
+}
+
+.sticker8 {
+  top: 60%;
+  left: 40%;
+  transform: rotate(30deg);
+}
+
+.sticker9 {
+  top: 80%;
+  left: 55%;
+  transform: rotate(-25deg);
+}
+
+.sticker10 {
+  top: 90%;
+  left: 60%; /* Move it further right */
+  transform: rotate(25deg);
+}
+
+
+
+/* Add hover effect on stickers */
+.sticker img:hover {
+  transform: scale(1.1) rotate(10deg); /* Make them grow and rotate slightly */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -178,3 +294,67 @@ footer p {
   display: block;
 }
 
+/* General project card styling */
+.project {
+  background-color: #fff;
+  width: 250px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the title inside the project */
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project h3:hover {
+  color: #f39c12; /* Hover effect for the title */
+}
+
+/* Styling the description text */
+.project p {
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.project p:hover {
+  color: #f39c12; /* Hover effect for the description text */
+}
+
+/* Add a hover effect to the entire card */
+.project:hover h3, .project:hover p {
+  color: #f39c12; /* Text turns to orange on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .project {
+      width: 80%;
+      margin: 10px 0;
+  }
+}
