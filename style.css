@@ -407,17 +407,37 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #home h1 {
+    font-size: 2.2rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+  }
+
   .projects-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .project {
-      width: 80%;
-      margin: 10px 0;
+    width: 90%;
+  }
+
+  .category-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  section {
+    padding: 80px 10px;
   }
 }
-
 
 
 .file-structure {
@@ -451,7 +471,7 @@ footer p {
 
 /* Target the #project2-page ID specifically */
 #project2-page #project-details {
-  text-align: center; /* Aligns text to the left */
+  text-align: left; /* Aligns text to the left */
   padding-left: 20px; /* Adds space from the left side */
   margin-left: 0; /* Removes any unwanted left margin */
 }
@@ -479,9 +499,6 @@ footer p {
   max-width: 100%; /* Prevents images from overflowing */
 }
 
-.VM-OS{
 
-  width: 50%; /* Adjust to your desired size */
-  height: auto;
-}
+
 
