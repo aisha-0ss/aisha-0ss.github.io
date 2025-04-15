@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini SOC Lab - Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="project2-page">
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Project Details -->
+    <section id="project-details">
+        <h2>Mini SOC Lab</h2>
+        <p>I created a Mini SOC Lab to simulate cyber attacks and analyze them using Wazuh and custom SIEM rules. This hands-on project allowed me to understand the full workflow of threat detection, attack reproduction, and incident reporting in a safe lab environment.</p>
+
+        <br> <br> <br><h1>📂Project Structure:</h1>
+        <div class="file-structure">
+
+            <section><div class="folder">📁 lab-setup/</div>
+                <section><div class="file"><strong>network-diagram.png</strong>: A diagram showing attacker/victim machines</div> 
+                    <img src="VM-OS details .jpg" alt="" class="VM-OS">
+                </section>
+            <div class="file"><strong>installation-steps.md</strong>: <a href="https://github.com/aisha-0ss/Mini-SOC-Lab" target="_blank">Link for how to downlaod Kali Linux</a> VM settings (RAM, CPU, network mode).</div>
+            <div class="file"><strong>VM-config.md</strong>: Install guide for Kali, Windows, Wazuh, Hydra, etc.</div>
+            </section>
+
+           <section><div class="folder">📁 attack-scenarios/</div>
+            <div class="file"><strong>attack1_brute_force/</strong></div>
+            <div class="file" style="margin-left: 40px;"><strong>description.md</strong>: Brute force explained using Hydra.</div>
+            <div class="file" style="margin-left: 40px;"><strong>how-to-reproduce.md</strong>: Step-by-step attack setup.</div>
+            <div class="file" style="margin-left: 40px;"><strong>MITRE-mapping.md</strong>: Mapped to T1110.</div>
+           </section>
+
+            <section><div class="file"><strong>attack2_reverse_shell/</strong></div>
+            <div class="file" style="margin-left: 40px;"><strong>description.md</strong>: Reverse shell overview.</div>
+            <div class="file" style="margin-left: 40px;"><strong>how-to-reproduce.md</strong>: Netcat or Msfvenom steps.</div>
+            <div class="file" style="margin-left: 40px;"><strong>MITRE-mapping.md</strong>: Mapped to T1059.001.</div>
+           </section>
+
+            <section><div class="folder">📁 detection-analysis/</div>
+            <div class="file"><strong>wazuh-alerts.md</strong>: Wazuh alerts triggered per attack.</div>
+            <div class="file"><strong>SIEM-rules.md</strong>: Custom detection rules for brute force and reverse shell.</div>
+            <div class="file"><strong>screenshots/</strong>: Wazuh alerts, Suricata, Wireshark logs.</div>
+             </section>
+
+            <section><div class="folder">📁 threat-report/</div>
+            <a href="path/to/final-incident-report.pdf" target="_blank">Download the Final Incident Report (PDF)</a>
+            <div class="file"><strong>final-incident-report.pdf</strong>: Full incident writeup, MITRE mapping, detection, response, recommendations.</div>
+            </section>
+        </div>
+
+        <h2>Link to Project Repo:</h2>
+        <a href="https://github.com/aisha-0ss/Mini-SOC-Lab" target="_blank">View on GitHub</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Aisha Zulkifl. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
