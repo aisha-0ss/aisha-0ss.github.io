@@ -96,77 +96,136 @@ section {
 }
 
 /* Random positioning for stickers at the bottom */
+/* Keyframes for free, cute, and dynamic movement with more wiggle and bounce */
+@keyframes moveSticker1 {
+  0% {
+    top: 85%;
+    left: 15%;
+    transform: rotate(10deg) scale(1);
+  }
+  25% {
+    top: 75%;
+    left: 10%;
+    transform: rotate(20deg) scale(1.1);
+  }
+  50% {
+    top: 65%;
+    left: 25%;
+    transform: rotate(-15deg) scale(1);
+  }
+  75% {
+    top: 70%;
+    left: 30%;
+    transform: rotate(10deg) scale(1.1);
+  }
+  100% {
+    top: 85%;
+    left: 40%;
+    transform: rotate(-20deg) scale(1);
+  }
+}
+
+@keyframes moveSticker2 {
+  0% {
+    top: 90%;
+    left: 30%;
+    transform: rotate(-10deg) scale(1);
+  }
+  25% {
+    top: 85%;
+    left: 45%;
+    transform: rotate(30deg) scale(1.2);
+  }
+  50% {
+    top: 75%;
+    left: 40%;
+    transform: rotate(-20deg) scale(1);
+  }
+  75% {
+    top: 80%;
+    left: 50%;
+    transform: rotate(15deg) scale(1.1);
+  }
+  100% {
+    top: 90%;
+    left: 60%;
+    transform: rotate(5deg) scale(1);
+  }
+}
+
+@keyframes moveSticker3 {
+  0% {
+    top: 95%;
+    left: 75%;
+    transform: rotate(15deg) scale(1);
+  }
+  25% {
+    top: 85%;
+    left: 70%;
+    transform: rotate(25deg) scale(1.1);
+  }
+  50% {
+    top: 75%;
+    left: 60%;
+    transform: rotate(-10deg) scale(1);
+  }
+  75% {
+    top: 80%;
+    left: 65%;
+    transform: rotate(5deg) scale(1.1);
+  }
+  100% {
+    top: 95%;
+    left: 80%;
+    transform: rotate(20deg) scale(1);
+  }
+}
+
+/* Apply the animation to all stickers */
 .sticker1 {
-  top: 85%;
-  left: 15%;
-  transform: rotate(10deg);
+  animation: moveSticker1 6s infinite ease-in-out;
 }
 
 .sticker2 {
-  top: 90%;
-  left: 30%;
-  transform: rotate(-10deg);
+  animation: moveSticker2 7s infinite ease-in-out;
 }
 
 .sticker3 {
-  top: 95%;
-  left: 75%;
-  transform: rotate(15deg);
+  animation: moveSticker3 6s infinite ease-in-out;
 }
 
 .sticker4 {
-    top: 77%;
-    left: 30%;
-    transform: rotate(-10deg);
+  animation: moveSticker1 5s infinite ease-in-out;
 }
 
-
 .sticker5 {
-  top: 60%;
-  left: 60%;
-  transform: rotate(20deg);
+  animation: moveSticker2 6s infinite ease-in-out;
 }
 
 .sticker6 {
-  top: 70%;
-  left: 80%;
-  transform: rotate(5deg);
+  animation: moveSticker3 5s infinite ease-in-out;
 }
 
 .sticker7 {
-  top: 75%;
-  left: 50%; /* Move it further right */
-  transform: rotate(-15deg);
+  animation: moveSticker1 7s infinite ease-in-out;
 }
 
 .sticker8 {
-  top: 60%;
-  left: 40%;
-  transform: rotate(30deg);
+  animation: moveSticker2 6s infinite ease-in-out;
 }
 
 .sticker9 {
-  top: 80%;
-  left: 55%;
-  transform: rotate(-25deg);
+  animation: moveSticker3 7s infinite ease-in-out;
 }
 
 .sticker10 {
-  top: 90%;
-  left: 60%; /* Move it further right */
-  transform: rotate(25deg);
+  animation: moveSticker1 6s infinite ease-in-out;
 }
-
-
 
 /* Add hover effect on stickers */
 .sticker img:hover {
-  transform: scale(1.1) rotate(10deg); /* Make them grow and rotate slightly */
+  transform: scale(1.2) rotate(20deg); /* Make them grow and rotate more on hover */
 }
-
-
-
-
 
 
 
@@ -358,3 +417,71 @@ footer p {
       margin: 10px 0;
   }
 }
+
+
+
+.file-structure {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  border-left: 3px solid #f39c12;;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.folder {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #1a73e8;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.file {
+  margin-left: 20px;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.file strong {
+  color: #333;
+}
+
+/* Target the #project2-page ID specifically */
+#project2-page #project-details {
+  text-align: center; /* Aligns text to the left */
+  padding-left: 20px; /* Adds space from the left side */
+  margin-left: 0; /* Removes any unwanted left margin */
+}
+
+/* Make sure folders and files align correctly */
+#project2-page .file, #project2-page .folder {
+  text-align: left;
+  margin-left: 20px; /* Add some margin to the left for indentation */
+}
+
+/* Optional: Style for the links to make them look better */
+#project2-page a {
+  text-decoration: none; /* Removes underline */
+   /* Change color of the links */
+}
+
+#project2-page a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Ensure images are aligned to the left too */
+#project2-page .file img {
+  display: block; /* Makes images behave like block-level elements */
+  margin-left: 20px; /* Adds space from the left */
+  max-width: 100%; /* Prevents images from overflowing */
+}
+
+.VM-OS{
+
+  width: 50%; /* Adjust to your desired size */
+  height: auto;
+}
+
