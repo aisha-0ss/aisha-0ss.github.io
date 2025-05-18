@@ -22,83 +22,31 @@
     <section id="project-details">
         <h2>Mini SOC Lab</h2>
     
-        <br><h3>🔍 Objective:</h3>
-        <p>
-            The SOC Lab I created is designed to test, investigate and simulate real-word cyberattacks in a controlled environment. 
-            In this I will be exploiting a window 10 operating system, which acts as the victim machine, using a Reverse shell technique. 
-            The attack will be delivered through email phishing, combined with URL obfuscation, which once executed, will provide me with command line (CLI) access to the victim machine.
-            <p>For detection and response, I will then deploy SIEM tools such as Wazuh to create custom alert rules for identifying threats, analyzing attackers' motives, conducting real-time monitoring, and performing log analysis.</p><br>
-        <p>
-        <b>This access allows me to perform advanced post-exploitation techniques, which will be covered in part 2 of the SOC Lab, including:</b><br>
-            <ul style="text-align: left; margin-left: 40px;">
-                <li><strong>Privilege Escalation</strong> – Gaining high-level access on the victim machine.</li>
-                <li><strong>Lateral Movement</strong> – Moving across systems in the network.</li>
-                <li><strong>Persistence</strong> – Setting up backdoors to maintain access.</li>
-                <li><strong>Data Access</strong> – Retrieving sensitive files or credentials.</li>
-                <li><strong>Command Execution</strong> – Running malicious commands.</li><br>
-            </ul>
-        </p>
     
-        <h3>🧪 Lab Setup:</h3>
+        
+       <h3>📁 Link to Project Repo:</h3>
         <div class="file-structure">
-            <div class="file"><strong>1. Network-Topology</strong>
-               <br>  <br><img src="kali to wins.jpg" alt="VM Network Adapter Table" style="max-width: 50%; height: auto;" width="975" height="512"><br>
-                <p>A diagram showing attacker/victim machines.</p></div>
-            
-            
-            <br><div class="file"><strong>2. Installation Steps</strong>
-                <p>I downloaded and installed VirtualBox to create a virtual environment for my attack simulation, within the VirtualBox I set the operating systems using their ISO and image file.</p></strong>
-                <br><ul style="text-align: left; margin-left: 40px;">
-                    <li><strong>Kali Linux</strong> – It’s Linux distribution designed for penetration testing. In this setup it will be used to simulate the attacker machine.</li>
-                    <li><strong>Windows 10</strong> – It’s A widely-used operating system. In the setup it will serve as the target machine to mimic a real-world user environment.<?li>
-                    <li><strong>Metasploitable</strong> – It’s a tool designed for testing and practicing exploitation techniques. </li>
-                </ul>
-                <br> <strong>Below are the officially download links for each component mentioned above:</strong>
-                <ul style="text-align: left; margin-left: 40px;">
-                    <li>VirtualBox:  – <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">https://www.virtualbox.org/wiki/Downloads</a></li>
-                    <li>Kali Linux:  – <a href="https://www.kali.org/get-kali/" target="_blank">https://www.kali.org/get-kali/</a></li>
-                    <li>Windows 10:  – <a href="https://www.microsoft.com/software-download/windows10" target="_blank">https://www.microsoft.com/software-download/windows10</a></li>
-                    <li>Metasploitable 2:  – <a href="https://sourceforge.net/projects/metasploitable/" target="_blank">https://sourceforge.net/projects/metasploitable/</a></li>
-                </ul>
-            </div>
-    
-            <br><div class="file"><strong>3. VM Configuration</strong>
-                <p>After installing the virtual machines, I configured the network settings for each VM by enabling and adjusting the network adapters. The configuration details are illustrated in the image below.</p><br>
-                <img src="Adapters.jpg" alt="VM Network Adapter Table" style="max-width: 100%; height: auto;" width="975" height="512"><br>
+        <a href="https://github.com/aisha-0ss/mini-SOC-Lab" target="_blank">View on GitHub</a>
+        </div>
 
-            <p>For my vulnerable machine (Metasploitable), I needed to ensure that Kali Linux and Metasploitable could communication effectively within the virtual environment. 
-                    And to achieve this, I created a custom NAT network using the VirtualBox Network Manager.
-                I named the network "meta-lab", set the ipv4 prefix to 10.0.2.0/24 and enabled DHCP to allow automatic Ip addressing.
-                Next, I attached the "meta-lab" network to Adapter 1 of both Kali Linux and Metasploitable, enabling a communication between the two machines. 
-                The final configuration is shown in the image below.<br> </p>
-                
-                <br><img src="VM-config (2).jpg" alt="VM Network Adapter Table" style="max-width: 100%; height: auto;" width="975" height="512"><br>
 
-             <p>The image below shows the network interfaces of each virtual machine, including their adapter settings and assigned networks.</p>
+        <div class="file-structure">
+        <h3>🔒 Link to Lab Setup:</h3>
+        <a href="https://github.com/aisha-0ss/mini-SOC-Lab/blob/main/Lab%20Setup.pdf" target="_blank">View on GitHub</a>
+        </div>
 
-             <br><img src="VM-config (2).jpg" alt="VM Network Adapter Table" style="max-width: 100%; height: auto;" width="975" height="512"><br>
 
-            <p> The next step was to verify network connectivity between the virtual machines. I ensured that:</p>
-            <p style="text-align: left; margin-left: 40px;"> – Kali Linux can ping Metaspoloitable, and Metaspoloitable can also ping Kali Linux, successfully.</p>
-           
-            <br><img src="kali to meta.jpg" alt="VM Network Adapter Table" style="max-width: 50%; height: auto;" width="975" height="512"><br>
-            <br><img src="meta to kali.jpg" alt="VM Network Adapter Table" style="max-width: 50%; height: auto;" width="975" height="512"><br>
-
-            <p style="text-align: left; margin-left: 40px;"> – Kali Linux can ping Metaspoloitable, and Metaspoloitable can also ping Kali Linux, successfully.</p>
-
-            <br><img src="kali to wins.jpg" alt="VM Network Adapter Table" style="max-width: 50%; height: auto;" width="975" height="512"><br>
-            <br><img src="wins to kali.jpg" alt="VM Network Adapter Table" style="max-width: 50%; height: auto;" width="975" height="512"><br>
-
-            <p>The screenshots are taken from VirtualBox, to show the successful communication between the virtual machines.</p>
-
-            </div>
+        <div class="file-structure">
+        <h3>👾 Link to Attack Scenarios:</h3>
+        <a href="https://github.com/aisha-0ss/mini-SOC-Lab/blob/main/Attack%20Scenario.pdf" target="_blank">View on GitHub</a>
         </div>
 
 
 
-        <br><br><h3>👾 Attack Scenarios:</h3>
+
+        <!--  <br><br><h3>👾 Attack Scenarios:</h3>
         <div class="file-structure">
-            <!-- <div class="file"><strong>1. Network-Topology</strong>
+            <div class="file"><strong>1. Network-Topology</strong>
                 <p>A diagram showing attacker/victim machines</p></div>
             <img src="vm-os-details.jpg" alt="VM and OS Details" class="VM-OS">
             
@@ -126,17 +74,16 @@
                 I named the network "meta-lab", set the ipv4 prefix to 10.0.2.0/24 and enabled DHCP to allow automatic Ip addressing.
                 Next, I attached the "meta-lab" network to Adapter 1 of both Kali Linux and Metasploitable, enabling a communication between the two machines. 
                 The final configuration is shown in the image below.<br> </p>
-            -->
+            
 
 
-            </div>
-        </div> 
+            </div> 
+        </div> -->
     
         <!-- Existing attack-scenarios and other folders stay as is -->
         <!-- No change to those sections unless you want to enrich with more content later -->
     
-        <h2>Link to Project Repo:</h2>
-        <a href="https://github.com/aisha-0ss/Mini-SOC-Lab" target="_blank">View on GitHub</a>
+        
     </section>
     
     
