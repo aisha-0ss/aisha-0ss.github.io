@@ -1,9 +1,6 @@
 /* General Reset */
 
 * {
-  -webkit-tap-highlight-color: transparent !important;
-}
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -178,6 +175,8 @@ footer p {
 }
 
 .category-btn {
+   background-color: transparent;
+   color: #000;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #f8bbd0;
@@ -242,7 +241,6 @@ footer p {
 .project a {
   text-decoration: none;
   color: inherit;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .project:hover {
@@ -397,3 +395,6 @@ footer p {
   margin-left: 20px; /* Adds space from the left */
   max-width: 100%; /* Prevents images from overflowing */
 }
+
+
+
