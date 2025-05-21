@@ -52,6 +52,7 @@ section {
 #home {
   background-color: #fce4ec;
   height: 100vh;
+  
 }
 
 #home h1 {
@@ -82,160 +83,28 @@ section {
   z-index: 2; /* Keep the text content on top */
 }
 
+
+
 /* Sticker Styling */
 .sticker {
-  position: absolute; /* Position them freely within the section */
-  z-index: 1; /* Ensure stickers are behind the text */
+  position: absolute;
+  z-index: 1;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .sticker img {
-  width: 80px; /* Size of each sticker */
+  width: 80px;
   height: auto;
   opacity: 0.9;
   transition: transform 0.3s ease;
 }
 
-/* Random positioning for stickers at the bottom */
-/* Keyframes for free, cute, and dynamic movement with more wiggle and bounce */
-@keyframes moveSticker1 {
-  0% {
-    top: 85%;
-    left: 15%;
-    transform: rotate(10deg) scale(1);
-  }
-  25% {
-    top: 75%;
-    left: 10%;
-    transform: rotate(20deg) scale(1.1);
-  }
-  50% {
-    top: 65%;
-    left: 25%;
-    transform: rotate(-15deg) scale(1);
-  }
-  75% {
-    top: 70%;
-    left: 30%;
-    transform: rotate(10deg) scale(1.1);
-  }
-  100% {
-    top: 85%;
-    left: 40%;
-    transform: rotate(-20deg) scale(1);
-  }
-}
-
-@keyframes moveSticker2 {
-  0% {
-    top: 90%;
-    left: 30%;
-    transform: rotate(-10deg) scale(1);
-  }
-  25% {
-    top: 85%;
-    left: 45%;
-    transform: rotate(30deg) scale(1.2);
-  }
-  50% {
-    top: 75%;
-    left: 40%;
-    transform: rotate(-20deg) scale(1);
-  }
-  75% {
-    top: 80%;
-    left: 50%;
-    transform: rotate(15deg) scale(1.1);
-  }
-  100% {
-    top: 90%;
-    left: 60%;
-    transform: rotate(5deg) scale(1);
-  }
-}
-
-@keyframes moveSticker3 {
-  0% {
-    top: 95%;
-    left: 75%;
-    transform: rotate(15deg) scale(1);
-  }
-  25% {
-    top: 85%;
-    left: 70%;
-    transform: rotate(25deg) scale(1.1);
-  }
-  50% {
-    top: 75%;
-    left: 60%;
-    transform: rotate(-10deg) scale(1);
-  }
-  75% {
-    top: 80%;
-    left: 65%;
-    transform: rotate(5deg) scale(1.1);
-  }
-  100% {
-    top: 95%;
-    left: 80%;
-    transform: rotate(20deg) scale(1);
-  }
-}
-
-/* Apply the animation to all stickers */
-.sticker1 {
-  animation: moveSticker1 6s infinite ease-in-out;
-}
-
-.sticker2 {
-  animation: moveSticker2 7s infinite ease-in-out;
-}
-
-.sticker3 {
-  animation: moveSticker3 6s infinite ease-in-out;
-}
-
-.sticker4 {
-  animation: moveSticker1 5s infinite ease-in-out;
-}
-
-.sticker5 {
-  animation: moveSticker2 6s infinite ease-in-out;
-}
-
-.sticker6 {
-  animation: moveSticker3 5s infinite ease-in-out;
-}
-
-.sticker7 {
-  animation: moveSticker1 7s infinite ease-in-out;
-}
-
-.sticker8 {
-  animation: moveSticker2 6s infinite ease-in-out;
-}
-
-.sticker9 {
-  animation: moveSticker3 7s infinite ease-in-out;
-}
-
-.sticker10 {
-  animation: moveSticker1 6s infinite ease-in-out;
-}
-
-/* Add hover effect on stickers */
 .sticker img:hover {
-  transform: scale(1.2) rotate(20deg); /* Make them grow and rotate more on hover */
+  transform: scale(1.2) rotate(20deg);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -386,7 +255,7 @@ footer p {
 }
 
 .project h3:hover {
-  color: #f39c12; /* Hover effect for the title */
+  color: #f8bbd0; /* Hover effect for the title */
 }
 
 /* Styling the description text */
@@ -397,12 +266,12 @@ footer p {
 }
 
 .project p:hover {
-  color: #f39c12; /* Hover effect for the description text */
+  color: #f8bbd0; /* Hover effect for the description text */
 }
 
 /* Add a hover effect to the entire card */
 .project:hover h3, .project:hover p {
-  color: #f39c12; /* Text turns to orange on hover */
+  color:#f8bbd0; /* Text turns to orange on hover */
 }
 
 /* Responsive Design */
@@ -449,6 +318,31 @@ footer p {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
+
+
+.file-structure1 {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  border-left: 3px solid #1a73e8;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+
+.file-structure2 {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  border-left: 3px solid #e91e63;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+
+
 
 .folder {
   font-weight: 500;
@@ -498,7 +392,3 @@ footer p {
   margin-left: 20px; /* Adds space from the left */
   max-width: 100%; /* Prevents images from overflowing */
 }
-
-
-
-
