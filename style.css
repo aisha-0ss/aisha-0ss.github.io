@@ -67,7 +67,9 @@ section {
 }
 
 
-
+button, .category-btn, a {
+  -webkit-tap-highlight-color: transparent;
+}
 
 
 /* Home Section */
