@@ -302,6 +302,8 @@ footer p {
   }
 
   .category-btn {
+  background-color: transparent; /* or any background you like */
+  color: #000;  
     font-size: 14px;
     padding: 8px 16px;
   }
