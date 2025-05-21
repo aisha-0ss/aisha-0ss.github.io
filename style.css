@@ -179,8 +179,6 @@ footer p {
 }
 
 .category-btn {
-   background-color: transparent;
-   color: #000;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #f8bbd0;
@@ -305,9 +303,7 @@ footer p {
     width: 90%;
   }
 
-  .category-btn {
-  background-color: transparent; /* or any background you like */
-  color: #000;  
+  .category-btn {  
     font-size: 14px;
     padding: 8px 16px;
   }
