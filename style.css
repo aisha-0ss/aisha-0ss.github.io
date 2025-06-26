@@ -13,7 +13,104 @@ body {
   overflow-x: hidden;
 }
 
+
+/* ========== Responsive Nav with Hamburger ========== */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e91e63;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+  }
+
+  .nav-links.show {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 nav {
+  position:sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -66,6 +163,9 @@ section {
 }
 
 
+button, .category-btn, a {
+  -webkit-tap-highlight-color: transparent;
+}
 
 
 
@@ -299,9 +399,11 @@ footer p {
     width: 90%;
   }
 
-  .category-btn {  
+  .category-btn { 
     font-size: 14px;
     padding: 8px 16px;
+     background-color: transparent;
+  color: #000;
   }
 
   section {
