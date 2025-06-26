@@ -51,12 +51,6 @@ window.onload = () => {
   });
 };
 
-
-  function toggleMenu() {
-    document.getElementById('nav-links').classList.toggle('show');
-  }
-
-
 // --- Filter function for project categories ---
 function filterProjects(category) {
   const allProjects = document.querySelectorAll('.project');
@@ -72,3 +66,4 @@ function filterProjects(category) {
     }
   });
 }
+
